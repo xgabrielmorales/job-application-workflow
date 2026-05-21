@@ -1,0 +1,11 @@
+services:
+  latex:
+    build: .
+    volumes:
+      - ./src:/src
+      - ./output:/output
+    command:
+      - "pdflatex"
+      - "-output-directory=/output"
+      - "-output-format=pdf"
+      - "/src/curriculum.tex"
