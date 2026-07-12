@@ -1,0 +1,11 @@
+[global]
+respect-gitignore = true
+flavor = "gfm"
+disable = ["MD014", "MD033"]
+
+[MD013]
+line-length = 120   # Line length
+code-blocks = false # Exclude code blocks from line length check
+headings = true     # Exclude headings in line length check
+tables = false      # Exclude tables from line length check
+reflow = true

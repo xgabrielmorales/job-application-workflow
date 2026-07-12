@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if [ $# -ne 2 ]; then
+  echo "Usage: $0 <pdf-file> <output-file>" >&2
+  exit 1
+fi
+
+PDF_FILE="$(realpath "$1")"
+OUTPUT_FILE="$(realpath -m "$2")"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+mkdir -p "$(dirname "$OUTPUT_FILE")"
+
+docker build -t pdftotext "$SCRIPT_DIR"
+docker run --rm \
+  --volume="$(dirname "$PDF_FILE"):/src:ro" \
+  --volume="$(dirname "$OUTPUT_FILE"):/output" \
+  pdftotext \
+  pdftotext -layout "/src/$(basename "$PDF_FILE")" "/output/$(basename "$OUTPUT_FILE")"
