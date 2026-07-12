@@ -90,7 +90,7 @@ profile.
 - `curriculum/` - LaTeX CV templates (`base-curriculum.tex` master with real data + `base-curriculum-template.tex`
   skeleton), custom ATS-optimized `article`-class template - see
   `.claude/skills/job-application-assistant/04-cv-templates.md`
-- `curriculum-adapted/` - tailored CV output per application (`curriculum_<company>.tex` + compiled `.pdf`)
+- `applications/` - tailored CV output per application (`curriculum_<company>.tex` + compiled `.pdf`)
 - `.claude/skills/` - AI skill definitions for the application workflow
 - `.agents/skills/` - Job search CLI tools
 
@@ -99,7 +99,7 @@ profile.
 1. User provides a job posting (URL or text)
 2. **Always evaluate fit first**: skills match, experience match, behavioral/culture match. Present this assessment to
    the user before proceeding.
-3. If good fit: create a targeted CV (`curriculum-adapted/curriculum_<company>.tex`)
+3. If good fit: create a targeted CV (`applications/curriculum_<company>.tex`)
 4. **Verify the document** (see Verification Checklist below)
 5. Prepare interview talking points based on the role requirements and your strengths
 
@@ -141,8 +141,8 @@ the user. Report the results as a pass/fail checklist.
 The CV MUST be compiled and visually inspected via the Read tool on the PDF output. "Looks fine in the .tex" is not
 acceptable - LaTeX page-break decisions are unpredictable. Iterate until these all pass:
 
-- [ ] CV compiled with **pdflatex** via `tools/build-cv/run curriculum-adapted/curriculum_<company>.tex
-      curriculum-adapted/curriculum_<company>.pdf` (builds and runs a Docker image, no host LaTeX install needed)
+- [ ] CV compiled with **pdflatex** via `tools/build-cv/run applications/curriculum_<company>.tex
+      applications/curriculum_<company>.pdf` (builds and runs a Docker image, no host LaTeX install needed)
 - [ ] **CV is exactly 1 page** - not 2, not 3
 - [ ] **No orphaned `\resumeSubheading`/`\resumeSubSubheading` titles** - a title must never sit alone at the bottom
       with its bullets pushed off-page. If content is long enough to threaten a 2nd page, cut content (see
@@ -152,7 +152,7 @@ acceptable - LaTeX page-break decisions are unpredictable. Iterate until these a
 ### ATS & keyword verification (CV)
 
 ATS parsers read the PDF's embedded text layer, not the rendered page. Extract it with `tools/pdftotext/run
-curriculum-adapted/curriculum_<company>.pdf curriculum-adapted/curriculum_<company>.txt` (a dedicated Docker image, no
+applications/curriculum_<company>.pdf applications/curriculum_<company>.txt` (a dedicated Docker image, no
 host `pdftotext` install needed) and verify what a parser sees.
 
 - [ ] CV text layer extracts cleanly - no `(cid:*)` markers, `�` replacement characters, or text visible in the PDF but

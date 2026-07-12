@@ -6,7 +6,7 @@
   (`[YOUR_NAME]`, `[COMPANY]`, etc.)
 - **Master reference with real data:** `curriculum/base-curriculum.tex` — use as the source when building targeted
   CVs
-- **Output file:** `curriculum-adapted/curriculum_<company>.tex`
+- **Output file:** `applications/curriculum_<company>.tex`
 - **Compile with:** `tools/build-cv/run` — builds a Docker image with `pdflatex` and compiles inside it, so no host
   LaTeX install is required
 - **Extract text layer with:** `tools/pdftotext/run` — same pattern, a dedicated Docker image with `poppler-utils`
@@ -103,7 +103,7 @@ If there is a gap in your employment history:
 After writing the CV and before presenting to the user, always compile and visually inspect the PDF. Iterate until the
 layout is clean. Workflow:
 
-1. Run `tools/build-cv/run curriculum-adapted/curriculum_<company>.tex curriculum-adapted/curriculum_<company>.pdf`
+1. Run `tools/build-cv/run applications/curriculum_<company>.tex applications/curriculum_<company>.pdf`
 2. Read the PDF via the Read tool and visually inspect it
 3. Check the page count: must be exactly 1
 4. Check for **orphaned entries**: a `\resumeSubheading`/`\resumeSubSubheading` title line must never sit alone with
@@ -128,7 +128,7 @@ not the rendered page. A CV can pass visual inspection and still extract as garb
 compile-and-inspect loop, verify the text layer:
 
 ```bash
-tools/pdftotext/run curriculum-adapted/curriculum_<company>.pdf curriculum-adapted/curriculum_<company>.txt
+tools/pdftotext/run applications/curriculum_<company>.pdf applications/curriculum_<company>.txt
 ```
 
 What to check in the extraction:
