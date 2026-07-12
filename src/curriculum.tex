@@ -19,6 +19,9 @@
 
 \urlstyle{same}
 
+\let\hrefOriginal\href
+\renewcommand{\href}[2]{\hrefOriginal{#1}{\underline{#2}}}
+
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
