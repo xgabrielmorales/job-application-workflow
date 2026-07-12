@@ -1,1 +1,2 @@
-output/
+curriculum-adapted/*
+!curriculum-adapted/.gitkeep
