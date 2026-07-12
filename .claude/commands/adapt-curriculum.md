@@ -66,7 +66,7 @@ Also read the LaTeX template files for concrete structural reference:
 - `curriculum/base-curriculum.tex` — master reference with real data
 - `curriculum/base-curriculum-template.tex` — skeleton with placeholder fields
 
-### CV (`applications/curriculum_<company>.tex`)
+### CV (`applications/<company>/curriculum.tex`)
 
 - Always in **English**
 - Follow the format from `04-cv-templates.md` (an `ACTIVE-TEMPLATE` block at the top means a custom template overrides
@@ -120,7 +120,7 @@ Do NOT read `04-cv-templates.md` — it governs LaTeX structure the drafter alre
 
 The draft is provided inline below. Do NOT use the Read tool on the draft file — use this exact text.
 
-<CV*DRAFT file="applications/curriculum*<COMPANY>.tex">
+<CV*DRAFT file="applications/<COMPANY>/curriculum.tex">
 <INSERT_CV_DRAFT_HERE>
 </CV_DRAFT>
 
@@ -139,7 +139,7 @@ A JSON array of concrete edits the drafter can apply directly without re-reading
 
 ```json
 {
-  "file": "applications/curriculum_<COMPANY>.tex",
+  "file": "applications/<COMPANY>/curriculum.tex",
   "old_string": "<exact text currently in the draft>",
   "new_string": "<replacement text>",
   "reason": "<one-line rationale: keyword match / company angle / reframing / style>"
@@ -215,7 +215,7 @@ and page limit it (and its linked manifest) specify instead of the defaults belo
 **Stock default** (no active template override), using the `tools/build-cv/run` script:
 
 ```bash
-tools/build-cv/run applications/curriculum_<company>.tex applications/curriculum_<company>.pdf
+tools/build-cv/run applications/<company>/curriculum.tex applications/<company>/curriculum.pdf
 ```
 
 - The script builds a Docker image and compiles the `.tex` file inside it, copying the resulting PDF to the given
@@ -227,7 +227,7 @@ If the compile fails, fix the error and re-compile until clean.
 
 Read the PDF via the Read tool and verify:
 
-**CV (`applications/curriculum_<company>.pdf`):**
+**CV (`applications/<company>/curriculum.pdf`):**
 
 - [ ] Exactly the page count required by the active template (or the stock default's 1 page if none is active) — not
       more, not fewer
@@ -267,7 +267,7 @@ its own Docker image and runs `pdftotext` inside it, same pattern as `tools/buil
 **1. Extract the text layer:**
 
 ```bash
-tools/pdftotext/run applications/curriculum_<company>.pdf applications/curriculum_<company>.txt
+tools/pdftotext/run applications/<company>/curriculum.pdf applications/<company>/curriculum.txt
 ```
 
 Read the `.txt` file.
@@ -333,6 +333,6 @@ Summarize 3-5 key decisions made to tailor the application:
 
 List the files written:
 
-- `applications/curriculum_<company>.tex`
+- `applications/<company>/curriculum.tex`
 
 Tell the user: "Your CV is ready for your review. Open it to check the final output before compiling."

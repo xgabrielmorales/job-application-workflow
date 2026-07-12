@@ -31,7 +31,7 @@ When the user provides a job posting (URL or text), follow this workflow:
   starting point
 - Follow the writing style rules in `02-writing-style.md` (critical: no em-dashes, no cliches)
 - Follow the guidelines in `04-cv-templates.md`
-- Create `applications/curriculum_<company>.tex` with tailored content
+- Create `applications/<company>/curriculum.tex` with tailored content
 - Adjust: profile statement, skills section, experience bullet emphasis, section order
 
 ## Reference Files
