@@ -25,29 +25,32 @@
 
 % Sections formatting
 \titleformat{\section}{ \vspace{-4pt}\scshape\raggedright\large }{}{0em}{}[
-\color{black}
-\titlerule
-\vspace{-5pt}
+  \color{black}
+  \titlerule
+  \vspace{-5pt}
 ]
 
 \pdfgentounicode=1
 
 % Custom commands
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textit{\small #2} \\
-      \textit{#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+  \vspace{-1pt}
+\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\small #2} \\
+    \textit{#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-5pt}
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeItemPlain}[1]{ \item\small{ {#1 \vspace{-2pt}} } }
+\newcommand{\resumeItemPlain}[1]{
+\item\small{ {#1 \vspace{-2pt}} }
+}
 
 \renewcommand{\labelitemii}{$\circ$}
 
