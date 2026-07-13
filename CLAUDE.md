@@ -91,7 +91,8 @@ profile.
   skeleton), custom ATS-optimized `article`-class template - see
   `.claude/skills/job-application-assistant/04-cv-templates.md`
 - `applications/` - one subdirectory per application, named after the company (`applications/<company>/`), holding
-  that application's generated files (`curriculum.tex` + compiled `.pdf`)
+  that application's generated files: `curriculum.tex` + compiled `.pdf`, and `<company>.md` (verified company
+  research produced during the workflow)
 - `.claude/skills/` - AI skill definitions for the application workflow
 - `.agents/skills/` - Job search CLI tools
 
