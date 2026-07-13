@@ -17,10 +17,8 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59  | Partial match, significant upskilling needed         |
 | 0-39   | Fundamental mismatch                                 |
 
-**Strong match areas:** Python (FastAPI, Django), Kubernetes, Docker, Terraform, CI/CD (GitHub Actions), observability
-(Prometheus, Grafana, OpenTelemetry), Linux systems administration **Moderate match areas:** AWS, GCP, PostgreSQL,
-Ansible, Celery/async task processing, Redis **Weak match areas:** Formal education/degree requirements (self-taught, no
-degree on file), languages beyond Python (Go, Java, etc.), frontend
+**Strong match areas:** [YOUR_CORE_SKILLS] **Moderate match areas:** [YOUR_SECONDARY_SKILLS] **Weak match areas:**
+[SKILLS_YOU_LACK]
 
 ### 2. Experience Match (0-100)
 
@@ -33,10 +31,8 @@ Does work history align with what they're looking for?
 | 40-59  | Adjacent experience, would need to make the case   |
 | 0-39   | Unrelated experience                               |
 
-**Strong:** Backend development (Python/FastAPI/Django), DevOps engineering, observability implementation, IaC/Terraform
-**Moderate:** Data engineering (ETL pipelines), team leadership (led a team of 6), sysadmin/Linux administration
-**Entry-level:** Formal SRE/platform engineering titles, security-focused roles, large-scale distributed systems beyond
-current scale
+**Strong:** [role types/domains with direct experience] **Moderate:** [adjacent/transferable experience]
+**Entry-level:** [role types you'd be stretching into]
 
 ### 3. Behavioral/Culture Fit (0-100)
 
@@ -73,25 +69,23 @@ Does this role advance career goals and contain tasks that energize?
 
 **Career goals:**
 
-- Backend (Python) roles at IT companies
-- DevOps / sysadmin roles at IT companies
-- Remote, LATAM-friendly employers
+- [Target role type 1]
+- [Target role type 2]
+- [Employer/location preference]
 
 **Motivation filter:** Evaluate not just whether you _can_ do the tasks, but whether the tasks will _energize_ you.
 Consider:
 
-- Tasks that energize: owning infrastructure end-to-end, observability/monitoring work, CI/CD and automation, backend
-  API/service development
-- Tasks that drain: not yet established - ask the candidate if a posting is borderline
+- Tasks that energize: [what energizes the candidate]
+- Tasks that drain: [what drains the candidate, or "not yet established - ask if a posting is borderline"]
 - Non-task factors: leadership style, department culture, company values, degree of autonomy
 
 **Life situation alignment:** Consider personal constraints:
 
-- **Security**: Currently employed (Tusdatos); minimum acceptable salary is $3,500 USD/month - treat postings below this
-  as a deal-breaker unless the candidate says otherwise
-- **Flexibility**: Remote-only, LATAM-friendly timezones (based in Colombia)
-- **Professional development**: Self-taught background - growth into more senior backend/DevOps roles is a priority; no
-  formal degree, so weigh postings that hard-require one accordingly
+- **Security**: [employment status]; minimum acceptable salary is [SALARY_FLOOR] - treat postings below this as a
+  deal-breaker unless the candidate says otherwise
+- **Flexibility**: [remote/location/timezone constraints]
+- **Professional development**: [education background and growth priorities]
 
 ## Output Format
 
